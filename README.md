@@ -1,50 +1,49 @@
-# React + TypeScript + Vite
+# Prueba Técnica BTG - React + Node.js + Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Para ejecutar el proyecto se deben ejecutar 2 terminales en la raiz del proyecto: 1 para el Frontend y otra para el Backend.
 
-Currently, two official plugins are available:
+# Ejecución del Frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+La primera terminal debe ubicarse en el directorio frontend
 
 ```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+// Cambiar al directorio del frontend
+cd frontend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Luego se debe ejecutar el comando para instalar las dependencias del proyecto
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+// Instalar dependencias del frontend
+npm install
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Finalmente ejecutamos el ambiente de desarrollo
+
+```js
+// Ejecutar ambiente de desarrollo
+npm run dev
+```
+
+# Ejecución del Backend
+
+La segunda terminal debe ubicarse en el directorio backend
+
+```js
+// Cambiar al directorio del backend
+cd backend
+```
+
+Luego se debe ejecutar el comando para instalar las dependencias del proyecto
+
+```js
+// Instalar dependencias del backend
+npm install
+```
+
+Finalmente ejecutamos el ambiente de desarrollo
+
+```js
+// Ejecutar ambiente de desarrollo
+npm run dev
 ```
